@@ -1,0 +1,572 @@
+/* HCMUS Auto - Premium Luxury homepage */
+.hcmus-home, .hcmus-site-header, .hcmus-site-footer {
+    --ha-navy: #101b29;
+    --ha-navy-2: #172638;
+    --ha-gold: #c9a96e;
+    --ha-gold-light: #e2c995;
+    --ha-cream: #f4f1eb;
+    --ha-ink: #18202a;
+    --ha-muted: #aeb7c1;
+    color: var(--ha-ink);
+    font-family: "Roboto", Arial, sans-serif;
+    line-height: 1.6;
+    overflow: hidden;
+}
+.hcmus-home * { box-sizing: border-box; }
+.hcmus-wrap { width: min(1180px, calc(100% - 48px)); margin: 0 auto; }
+.hcmus-eyebrow { color: var(--ha-gold); font-size: 11px; font-weight: 700; letter-spacing: 3px; margin: 0 0 16px; }
+.hcmus-hero {
+    min-height: clamp(560px, calc(100vh - 76px), 840px);
+    display: flex;
+    align-items: center;
+    position: relative;
+    isolation: isolate;
+    color: #fff;
+    background:
+      linear-gradient(90deg, rgba(8,15,24,.96) 0%, rgba(8,15,24,.78) 48%, rgba(8,15,24,.18) 100%),
+      url("https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=2000&q=85") center 55% / cover no-repeat,
+      var(--ha-navy);
+}
+.hcmus-hero__overlay { position: absolute; inset: 0; z-index: -1; background: linear-gradient(0deg, rgba(8,15,24,.55), transparent 35%); }
+.hcmus-hero__content { position: relative; padding: 100px 0 130px; }
+.hcmus-hero h1 { color: #fff; font-size: clamp(36px, 5.3vw, 68px); line-height: 1.12; letter-spacing: 1px; font-weight: 700; margin: 0 0 24px; }
+.hcmus-hero h1 span { color: var(--ha-gold-light); }
+.hcmus-hero__desc { max-width: 550px; color: #d8dde3; font-size: 16px; margin: 0 0 34px; }
+.hcmus-button { display: inline-flex; align-items: center; gap: 22px; padding: 15px 24px; text-decoration: none !important; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; transition: .25s ease; }
+.hcmus-button--gold { color: #121a23 !important; background: var(--ha-gold); border: 1px solid var(--ha-gold); }
+.hcmus-button--gold:hover { background: var(--ha-gold-light); border-color: var(--ha-gold-light); color: #121a23 !important; transform: translateY(-2px); }
+.hcmus-button--outline { color: var(--ha-gold) !important; border: 1px solid var(--ha-gold); }
+.hcmus-hero__bottom { position: absolute; bottom: 24px; left: 0; right: 0; display: flex; justify-content: space-between; width: min(1180px, calc(100% - 48px)); margin: auto; color: rgba(255,255,255,.58); font-size: 9px; letter-spacing: 2px; }
+.hcmus-section { padding: 92px 0; }
+.hcmus-featured { background: var(--ha-cream); }
+.hcmus-section-heading { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 34px; }
+.hcmus-section-heading h2, .hcmus-about h2, .hcmus-contact-strip h2 { color: var(--ha-navy); font-size: clamp(26px, 3vw, 38px); line-height: 1.2; letter-spacing: .5px; margin: 0; font-weight: 700; }
+.hcmus-text-link { display: inline-flex; gap: 12px; align-items: center; color: var(--ha-navy) !important; text-decoration: none !important; font-size: 10px; font-weight: 700; letter-spacing: 1.4px; border-bottom: 1px solid var(--ha-gold); padding-bottom: 8px; }
+.hcmus-product-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.hcmus-product-card { background: #fff; min-width: 0; transition: transform .25s ease, box-shadow .25s ease; }
+.hcmus-product-card:hover { transform: translateY(-5px); box-shadow: 0 18px 40px rgba(16,27,41,.12); }
+.hcmus-product-card__media { display: block; aspect-ratio: 4 / 3; overflow: hidden; background: #e6e3dd; }
+.hcmus-product-card__image { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s ease; }
+.hcmus-product-card:hover .hcmus-product-card__image { transform: scale(1.04); }
+.hcmus-product-card__body { padding: 20px; }
+.hcmus-product-card__label { color: #9a8359; font-size: 9px; letter-spacing: 1.6px; font-weight: 700; margin: 0 0 8px; }
+.hcmus-product-card h3 { font-size: 17px; line-height: 1.35; margin: 0 0 18px; }
+.hcmus-product-card h3 a { color: var(--ha-navy); text-decoration: none; }
+.hcmus-product-card__bottom { display: flex; justify-content: space-between; align-items: center; gap: 10px; border-top: 1px solid #eee9df; padding-top: 14px; }
+.hcmus-price { color: #8b6c35; font-size: 14px; font-weight: 700; }
+.hcmus-price del { color: #9b9b9b; font-weight: 400; }
+.hcmus-price ins { text-decoration: none; }
+.hcmus-arrow-link { color: var(--ha-gold) !important; font-size: 22px; text-decoration: none !important; }
+.hcmus-empty-state { padding: 44px; text-align: center; background: #fff; border: 1px solid #e8e1d5; }
+.hcmus-empty-state h3 { color: var(--ha-navy); margin: 0 0 8px; }
+.hcmus-empty-state p, .hcmus-note { color: #69727c; margin: 0 0 20px; }
+.hcmus-categories { background: #fff; }
+.hcmus-section-heading--center { justify-content: center; text-align: center; }
+.hcmus-section-subtitle { color: #6e7780; margin: 14px 0 0; }
+.hcmus-category-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+.hcmus-category-card { min-height: 190px; display: flex; flex-direction: column; justify-content: space-between; padding: 24px; color: #fff !important; text-decoration: none !important; background: linear-gradient(145deg, #1c2d40, #101b29); border: 1px solid rgba(201,169,110,.28); transition: .25s ease; }
+.hcmus-category-card:hover { background: linear-gradient(145deg, #293e54, #142235); transform: translateY(-4px); }
+.hcmus-category-card__number { color: var(--ha-gold); font-size: 11px; letter-spacing: 2px; }
+.hcmus-category-card__name { font-size: 22px; font-weight: 700; letter-spacing: .5px; }
+.hcmus-category-card__arrow { color: var(--ha-gold); font-size: 23px; align-self: end; }
+.hcmus-about { background: var(--ha-navy); color: #fff; padding: 100px 0; }
+.hcmus-about__inner { display: grid; grid-template-columns: .8fr 1.2fr; gap: 70px; align-items: center; }
+.hcmus-about__mark { min-height: 270px; display: grid; place-items: center; border: 1px solid rgba(201,169,110,.35); color: var(--ha-gold); font-family: Georgia, serif; font-size: clamp(100px, 16vw, 190px); letter-spacing: -18px; }
+.hcmus-about__mark span { color: #fff; }
+.hcmus-about h2 { color: #fff; margin-bottom: 22px; }
+.hcmus-about h2 span { color: var(--ha-gold-light); }
+.hcmus-about__content > p:not(.hcmus-eyebrow) { max-width: 600px; color: #c4ccd4; margin: 0 0 28px; }
+.hcmus-about .hcmus-text-link { color: #fff !important; }
+.hcmus-contact-strip { background: #e9e3d8; padding: 48px 0; }
+.hcmus-contact-strip__inner { display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+.hcmus-contact-strip .hcmus-eyebrow { margin-bottom: 8px; }
+.hcmus-contact-strip h2 { font-size: clamp(21px, 2.6vw, 30px); }
+@media (max-width: 900px) {
+    .hcmus-product-grid, .hcmus-category-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .hcmus-about__inner { grid-template-columns: 1fr; gap: 36px; }
+    .hcmus-about__mark { min-height: 190px; }
+}
+@media (max-width: 600px) {
+    .hcmus-wrap, .hcmus-hero__bottom { width: min(100% - 32px, 1180px); }
+    .hcmus-hero { min-height: 590px; background-position: 62% center; }
+    .hcmus-hero__content { padding: 80px 0 110px; }
+    .hcmus-hero__desc { font-size: 14px; }
+    .hcmus-hero__bottom { font-size: 8px; }
+    .hcmus-section { padding: 64px 0; }
+    .hcmus-section-heading { align-items: start; flex-direction: column; }
+    .hcmus-product-grid { gap: 12px; }
+    .hcmus-product-card__body { padding: 13px; }
+    .hcmus-product-card h3 { font-size: 14px; }
+    .hcmus-price { font-size: 12px; }
+    .hcmus-category-card { min-height: 150px; padding: 17px; }
+    .hcmus-category-card__name { font-size: 18px; }
+    .hcmus-about { padding: 68px 0; }
+    .hcmus-contact-strip__inner { align-items: start; flex-direction: column; }
+}
+
+/* ===== Trang toàn màn hình ===== */
+html { scroll-behavior: smooth; }
+body.hcmus-standalone { margin: 0; background: #fff; font-family: "Roboto", Arial, sans-serif; color: #18202a; overflow-x: hidden; }
+.hcmus-site-header *, .hcmus-site-footer * { box-sizing: border-box; }
+.hcmus-site-header a, .hcmus-site-footer a { text-decoration: none !important; }
+
+/* Header */
+.hcmus-site-header { position: sticky; top: 0; z-index: 999; background: var(--ha-navy); border-bottom: 1px solid rgba(201,169,110,.25); }
+.admin-bar .hcmus-site-header { top: 32px; }
+.hcmus-header__inner { width: min(1320px, calc(100% - 48px)); margin: 0 auto; height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.hcmus-logo { display: inline-flex; align-items: center; gap: 12px; color: #fff !important; }
+.hcmus-logo__mark { display: grid; place-items: center; width: 38px; height: 38px; border: 1px solid var(--ha-gold); color: var(--ha-gold); font-family: Georgia, serif; font-weight: 700; font-size: 15px; }
+.hcmus-logo__text { color: #fff; font-size: 16px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+.hcmus-nav { display: flex; align-items: center; gap: 30px; }
+.hcmus-nav a { color: #d8dde3 !important; font-size: 11px; font-weight: 700; letter-spacing: 1.6px; transition: color .2s; }
+.hcmus-nav a:hover { color: var(--ha-gold) !important; }
+.hcmus-nav__cart { display: inline-flex; align-items: center; gap: 8px; }
+.hcmus-nav__count { min-width: 20px; height: 20px; padding: 0 5px; display: inline-grid; place-items: center; border-radius: 10px; background: var(--ha-gold); color: #101b29; font-size: 10px; }
+.hcmus-nav-toggle { display: none; background: none; border: 0; padding: 8px; cursor: pointer; }
+.hcmus-nav-toggle span { display: block; width: 24px; height: 2px; margin: 5px 0; background: var(--ha-gold); }
+
+/* Bộ lọc tìm xe */
+.hcmus-filter { background: var(--ha-navy-2); padding: 22px 0 26px; border-bottom: 1px solid rgba(201,169,110,.2); }
+.hcmus-filter .hcmus-eyebrow { margin-bottom: 14px; }
+.hcmus-filter__form { display: grid; grid-template-columns: 2fr 1fr 1fr auto; gap: 14px; align-items: end; }
+.hcmus-filter__form label { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.hcmus-filter__form label span { color: var(--ha-muted); font-size: 10px; font-weight: 700; letter-spacing: 1.6px; }
+.hcmus-filter__form input, .hcmus-filter__form select { width: 100%; height: 48px; padding: 0 14px; color: #fff; background: rgba(255,255,255,.07); border: 1px solid rgba(201,169,110,.35); border-radius: 0; font-size: 14px; font-family: inherit; }
+.hcmus-filter__form input::placeholder { color: #8d98a4; }
+.hcmus-filter__form select option { color: #18202a; }
+.hcmus-filter__form .hcmus-button { height: 48px; padding: 0 26px; cursor: pointer; justify-content: center; }
+
+/* Footer */
+.hcmus-site-footer { background: #0a121c; color: #c4ccd4; }
+.hcmus-footer__grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 48px; padding: 70px 0 54px; }
+.hcmus-footer__brand p { max-width: 340px; margin: 18px 0 0; font-size: 14px; line-height: 1.7; }
+.hcmus-site-footer h4 { color: var(--ha-gold); font-size: 11px; letter-spacing: 2.4px; margin: 0 0 20px; font-weight: 700; }
+.hcmus-footer__grid a:not(.hcmus-logo) { display: block; color: #c4ccd4 !important; font-size: 14px; margin-bottom: 12px; transition: color .2s; }
+.hcmus-footer__grid a:not(.hcmus-logo):hover { color: var(--ha-gold) !important; }
+.hcmus-footer__bottom { border-top: 1px solid rgba(255,255,255,.08); padding: 20px 0; font-size: 12px; color: #8d98a4; }
+
+@media (min-width: 1500px) { .hcmus-wrap, .hcmus-hero__bottom { width: min(1320px, calc(100% - 96px)); } }
+@media (max-width: 782px) { .admin-bar .hcmus-site-header { top: 46px; } }
+@media (max-width: 960px) {
+    .hcmus-nav a.hcmus-nav__hide-sm { display: none; }
+    .hcmus-filter__form { grid-template-columns: 1fr 1fr; }
+    .hcmus-filter__form .hcmus-button { grid-column: 1 / -1; }
+    .hcmus-footer__grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+}
+@media (max-width: 600px) {
+    .hcmus-header__inner { width: calc(100% - 32px); }
+    .hcmus-filter__form { grid-template-columns: 1fr; }
+    .hcmus-footer__grid { grid-template-columns: 1fr; padding: 54px 0 36px; }
+}
+
+/* ===== Danh sách xe theo loại hình (phong cách Rolls-Royce) ===== */
+.hcmus-collection { background: var(--ha-cream); }
+.hcmus-tabs { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 44px; }
+.hcmus-tab { display: inline-block; padding: 11px 22px; border: 1px solid rgba(16,27,41,.35); border-radius: 99px; color: var(--ha-navy) !important; font-size: 11px; font-weight: 500; letter-spacing: 2px; text-decoration: none !important; transition: .2s ease; }
+.hcmus-tab:hover { border-color: var(--ha-gold); color: #7d6535 !important; }
+.hcmus-tab.is-active { background: var(--ha-navy); border-color: var(--ha-navy); color: #fff !important; }
+.hcmus-type { padding-top: 46px; margin-top: 46px; border-top: 1px solid rgba(16,27,41,.14); }
+.hcmus-type:first-of-type { margin-top: 0; padding-top: 0; border-top: 0; }
+.hcmus-type[hidden] { display: none; }
+.hcmus-type__head { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 26px; }
+.hcmus-type__number { display: block; color: var(--ha-gold); font-size: 11px; letter-spacing: 3px; margin-bottom: 8px; }
+.hcmus-type__head h3 { margin: 0; color: var(--ha-navy); font-size: clamp(22px, 2.4vw, 30px); font-weight: 400; letter-spacing: 2.5px; line-height: 1.2; }
+.hcmus-ghost-link { display: inline-flex; gap: 12px; align-items: center; padding: 12px 22px; border: 1px solid var(--ha-navy); border-radius: 99px; color: var(--ha-navy) !important; font-size: 10px; font-weight: 500; letter-spacing: 2px; text-decoration: none !important; white-space: nowrap; transition: .2s ease; }
+.hcmus-ghost-link:hover { background: var(--ha-navy); color: #fff !important; }
+.hcmus-product-card { box-shadow: none; }
+.hcmus-product-card__label { letter-spacing: 2px; }
+@media (max-width: 600px) {
+    .hcmus-type__head { flex-direction: column; align-items: start; }
+    .hcmus-tabs { gap: 8px; }
+    .hcmus-tab { padding: 9px 15px; }
+}
+
+/* ===== Header mới + menu trượt (phong cách Rolls-Royce) ===== */
+.hcmus-header__left { display: flex; align-items: center; gap: 28px; }
+.hcmus-nav { position: static; }
+.hcmus-menu-btn { display: inline-flex; align-items: center; gap: 12px; background: none; border: 0; padding: 8px 0; cursor: pointer; color: #fff; }
+.hcmus-menu-btn__icon { display: inline-flex; flex-direction: column; gap: 5px; }
+.hcmus-menu-btn__icon i { display: block; width: 22px; height: 1px; background: #fff; }
+.hcmus-menu-btn__text { font-size: 11px; font-weight: 500; letter-spacing: 2px; }
+.hcmus-menu-btn:hover .hcmus-menu-btn__text { color: var(--ha-gold); }
+
+body.hcmus-menu-open { overflow: hidden; }
+.hcmus-menu { position: fixed; inset: 0; z-index: 100000; display: flex; visibility: hidden; pointer-events: none; transition: visibility 0s .5s; }
+.hcmus-menu.is-open { visibility: visible; pointer-events: auto; transition: none; }
+.hcmus-menu * { box-sizing: border-box; }
+.hcmus-menu__panel { position: relative; width: min(42vw, 640px); min-width: 360px; display: flex; flex-direction: column; justify-content: center; padding: 120px 60px 60px; overflow-y: auto; background: rgba(10,18,28,.95); -webkit-backdrop-filter: blur(24px); backdrop-filter: blur(24px); transform: translateX(-100%); transition: transform .5s cubic-bezier(.2,.7,.2,1); }
+.hcmus-menu.is-open .hcmus-menu__panel { transform: none; }
+.hcmus-menu__close { position: absolute; top: 34px; left: 60px; display: inline-flex; gap: 14px; align-items: center; background: none; border: 0; cursor: pointer; color: #fff; font-size: 12px; font-weight: 500; letter-spacing: 2px; }
+.hcmus-menu__close:hover { color: var(--ha-gold); }
+.hcmus-menu__list { display: none; list-style: none; margin: 0; padding: 0; text-align: right; }
+.hcmus-menu__list.is-active { display: block; }
+.hcmus-menu__list li { margin: 0; padding: 0; }
+.hcmus-menu__item { display: block; width: 100%; padding: 15px 0; background: none; border: 0; cursor: pointer; text-align: right; color: rgba(255,255,255,.5) !important; font-family: inherit; font-size: 19px; font-weight: 500; letter-spacing: 3px; text-decoration: none !important; text-transform: uppercase; transition: color .2s; }
+.hcmus-menu__item:hover, .hcmus-menu__item:focus, .hcmus-menu__car.is-current { color: #fff !important; }
+.hcmus-menu__back { color: rgba(255,255,255,.75) !important; margin-bottom: 18px; }
+.hcmus-menu__gap { margin-top: 28px; }
+.hcmus-menu__preview { position: relative; flex: 1; overflow: hidden; background: #0a121c; opacity: 0; transition: opacity .5s .15s; }
+.hcmus-menu.is-open .hcmus-menu__preview { opacity: 1; }
+.hcmus-menu__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .35s; }
+.hcmus-menu__img.is-visible { opacity: 1; }
+.hcmus-menu__caption { position: absolute; left: 50%; bottom: 56px; transform: translateX(-50%); text-align: center; opacity: 0; transition: opacity .3s; width: min(90%, 420px); }
+.hcmus-menu__caption.is-visible { opacity: 1; }
+.hcmus-menu__name { margin: 0 0 6px; color: #fff; font-size: 20px; letter-spacing: 3px; text-transform: uppercase; text-shadow: 0 2px 16px rgba(0,0,0,.6); }
+.hcmus-menu__price { margin: 0 0 18px; color: var(--ha-gold); font-size: 15px; letter-spacing: 1px; text-shadow: 0 2px 12px rgba(0,0,0,.6); }
+.hcmus-menu__discover { display: inline-block; padding: 14px 54px; border-radius: 99px; background: var(--ha-gold); color: #101b29 !important; font-size: 12px; font-weight: 700; letter-spacing: 2.5px; text-decoration: none !important; }
+@media (max-width: 900px) {
+    .hcmus-menu__panel { width: 100%; min-width: 0; padding: 100px 28px 40px; }
+    .hcmus-menu__close { left: 28px; }
+    .hcmus-menu__preview { display: none; }
+    .hcmus-menu__item { font-size: 16px; }
+    .hcmus-header__left { gap: 16px; }
+    .hcmus-logo__text { display: none; }
+}
+
+/* ===== Liên kết dự toán trên thẻ xe ===== */
+.hcmus-card-cost { display: inline-block; margin-top: 12px; color: #7d6535 !important; font-size: 9px; font-weight: 700; letter-spacing: 1.6px; text-decoration: none !important; border-bottom: 1px solid var(--ha-gold); padding-bottom: 3px; }
+.hcmus-card-cost:hover { color: var(--ha-navy) !important; }
+
+/* ===== Dự toán chi phí lăn bánh ===== */
+.hcmus-cost-section { background: var(--ha-navy); padding: 92px 0; scroll-margin-top: 90px; }
+.hcmus-cost-section .hcmus-section-heading h2 { color: #fff; }
+.hcmus-cost__grid, .hcmus-cost { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+.hcmus-cost__form { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.hcmus-cost__form .full { grid-column: 1 / -1; }
+.hcmus-cost__form label { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.hcmus-cost__form label > span { color: var(--ha-muted); font-size: 10px; font-weight: 700; letter-spacing: 1.6px; }
+.hcmus-cost__form input[type="text"], .hcmus-cost__form input[type="number"], .hcmus-cost__form select { width: 100%; height: 48px; padding: 0 14px; color: #fff; background: rgba(255,255,255,.07); border: 1px solid rgba(201,169,110,.35); border-radius: 0; font-size: 14px; font-family: inherit; }
+.hcmus-cost__form select option { color: #18202a; }
+.hcmus-cost__form .hcmus-cost__check { flex-direction: row; align-items: center; gap: 12px; }
+.hcmus-cost__form .hcmus-cost__check span { color: #c4ccd4; font-size: 13px; letter-spacing: .3px; font-weight: 400; }
+.hcmus-cost__form .hcmus-cost__check input { width: 18px; height: 18px; accent-color: var(--ha-gold); }
+.hcmus-cost__subtitle { margin: 14px 0 0; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.12); color: var(--ha-gold); font-size: 11px; font-weight: 700; letter-spacing: 3px; }
+.hcmus-cost__result { background: #fff; padding: 34px; color: #18202a; }
+.hcmus-cost__row { display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid #eee9df; font-size: 14px; }
+.hcmus-cost__row em { color: #9a8359; font-style: normal; font-size: 12px; }
+.hcmus-cost__row strong { white-space: nowrap; color: var(--ha-navy); }
+.hcmus-cost__row--total { padding: 18px 0; font-size: 16px; border-bottom: 0; }
+.hcmus-cost__row--total span { font-weight: 700; letter-spacing: 1px; }
+.hcmus-cost__row--total strong { font-size: 22px; color: #7d6535; }
+.hcmus-cost__loan { margin-top: 8px; padding-top: 14px; border-top: 2px solid var(--ha-gold); }
+.hcmus-cost__note { margin: 20px 0 0; color: #6e7780; font-size: 12px; line-height: 1.7; }
+.hcmus-cost-only .hcmus-cost-section { padding: 60px 0; }
+@media (max-width: 900px) { .hcmus-cost { grid-template-columns: 1fr; } }
+@media (max-width: 600px) { .hcmus-cost__form { grid-template-columns: 1fr; } .hcmus-cost__result { padding: 22px; } }
+
+/* ===================================================================
+   v2.0 – nhiều trang, chuyển cảnh, trang chủ giới thiệu, chi tiết xe
+   =================================================================== */
+.hcmus-site-footer .hcmus-footer__line { display: block; color: #8d98a4; font-size: 13px; margin-bottom: 8px; line-height: 1.5; }
+
+/* --- Chuyển cảnh --- */
+.hcmus-curtain { position: fixed; inset: 0; z-index: 100001; display: grid; place-items: center; background: #0a121c; pointer-events: none; transform: translateY(100%); animation: hcmus-curtain-out .8s cubic-bezier(.77, 0, .18, 1) .05s both; }
+.hcmus-curtain span { color: #c9a96e; font: 700 13px/1 Arial, sans-serif; letter-spacing: 6px; }
+@keyframes hcmus-curtain-out { from { transform: translateY(0); } to { transform: translateY(-100%); } }
+.hcmus-js .hcmus-reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s ease; }
+.hcmus-js .hcmus-reveal.is-in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+    .hcmus-curtain { display: none; }
+    .hcmus-js .hcmus-reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* --- Đầu trang con --- */
+.hcmus-page-head { background: var(--ha-navy); color: #fff; padding: 76px 0 58px; }
+.hcmus-page-head h1 { margin: 0; color: #fff; font-size: clamp(30px, 4.4vw, 50px); font-weight: 300; letter-spacing: 4px; line-height: 1.15; }
+.hcmus-page-head__desc { margin: 18px 0 0; max-width: 620px; color: var(--ha-muted); font-size: 16px; }
+.hcmus-page-head + .hcmus-cost-section { border-top: 1px solid rgba(201,169,110,.2); }
+.hcmus-page-head--product { padding: 46px 0 44px; }
+.hcmus-page-head--product h1 { font-size: clamp(28px, 3.6vw, 42px); }
+.hcmus-breadcrumb { margin-bottom: 26px; color: var(--ha-muted); font-size: 10px; letter-spacing: 2px; }
+.hcmus-breadcrumb a { color: var(--ha-muted) !important; text-decoration: none !important; }
+.hcmus-breadcrumb a:hover { color: var(--ha-gold) !important; }
+.hcmus-product__price { margin: 16px 0 0; color: var(--ha-gold-light); font-size: 28px; font-weight: 500; letter-spacing: .5px; }
+.hcmus-cars .hcmus-filter { border-top: 1px solid rgba(201,169,110,.2); }
+
+/* --- Kết quả tìm kiếm --- */
+.hcmus-results-bar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 30px; }
+.hcmus-results-bar p { margin: 0; color: var(--ha-ink); font-size: 15px; }
+.hcmus-chips { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.hcmus-chips span { padding: 8px 16px; border: 1px solid rgba(16,27,41,.3); border-radius: 99px; font-size: 12px; letter-spacing: 1px; }
+
+/* --- Trang chủ: mục tiêu, triết lý, showroom --- */
+.hcmus-hero__actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 8px; }
+.hcmus-intro { background: var(--ha-cream); }
+.hcmus-intro__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.hcmus-intro__card { background: #fff; padding: 44px 40px; border-top: 2px solid var(--ha-gold); }
+.hcmus-intro__label { display: block; margin-bottom: 18px; color: var(--ha-gold); font-size: 11px; font-weight: 700; letter-spacing: 3px; }
+.hcmus-intro__card p { margin: 0; color: #2b3540; font-size: 19px; line-height: 1.75; font-weight: 300; }
+.hcmus-values { background: var(--ha-navy); color: #fff; }
+.hcmus-values .hcmus-section-heading h2 { color: #fff; }
+.hcmus-values__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 34px; }
+.hcmus-values__item { padding-top: 26px; border-top: 1px solid rgba(201,169,110,.4); }
+.hcmus-values__number { display: block; margin-bottom: 18px; color: var(--ha-gold); font-size: 12px; letter-spacing: 3px; }
+.hcmus-values__item h3 { margin: 0 0 14px; color: #fff; font-size: 22px; font-weight: 400; letter-spacing: 3px; }
+.hcmus-values__item p { margin: 0; color: var(--ha-muted); font-size: 15px; line-height: 1.75; }
+.hcmus-showroom { background: #fff; }
+.hcmus-showroom__inner { display: grid; grid-template-columns: 1.1fr 1fr; gap: 64px; align-items: center; }
+.hcmus-showroom__media { min-height: 440px; display: grid; place-items: center; background: linear-gradient(145deg, #172638, #0a121c) center / cover no-repeat; border: 1px solid rgba(201,169,110,.35); }
+.hcmus-showroom__media span { color: var(--ha-gold); font-family: Georgia, serif; font-size: clamp(26px, 4vw, 46px); letter-spacing: 12px; }
+.hcmus-showroom__content h2 { margin: 0 0 20px; color: var(--ha-navy); font-size: clamp(26px, 3vw, 38px); font-weight: 300; letter-spacing: 3px; }
+.hcmus-showroom__content p { color: #4a5560; font-size: 16px; line-height: 1.8; }
+.hcmus-showroom__info { display: grid; grid-template-columns: auto 1fr; gap: 12px 28px; margin: 26px 0 32px; padding: 24px 0; border-top: 1px solid #e8e1d5; border-bottom: 1px solid #e8e1d5; }
+.hcmus-showroom__info dt { color: #9a8359; font-size: 10px; font-weight: 700; letter-spacing: 2px; padding-top: 3px; }
+.hcmus-showroom__info dd { margin: 0; color: var(--ha-ink); font-size: 15px; }
+
+/* --- Chi tiết xe --- */
+.hcmus-button--dark { color: #fff !important; background: var(--ha-navy); border: 1px solid var(--ha-navy); }
+.hcmus-button--dark:hover { background: #22364d; border-color: #22364d; transform: translateY(-2px); }
+.hcmus-subnav-wrap { background: #fff; border-bottom: 1px solid #e8e1d5; }
+.hcmus-subnav { display: flex; gap: 4px; overflow-x: auto; }
+.hcmus-subnav a { padding: 22px 24px; border-bottom: 2px solid transparent; color: #5b6671 !important; font-size: 11px; font-weight: 500; letter-spacing: 2px; text-decoration: none !important; white-space: nowrap; transition: color .2s, border-color .2s; }
+.hcmus-subnav a:hover { color: var(--ha-navy) !important; }
+.hcmus-subnav a.is-active { color: var(--ha-navy) !important; border-bottom-color: var(--ha-gold); }
+.hcmus-product__body { background: var(--ha-cream); padding: 64px 0 96px; min-height: 420px; }
+.hcmus-product__overview { display: grid; grid-template-columns: 1.15fr 1fr; gap: 56px; align-items: start; }
+.hcmus-gallery__main { display: grid; place-items: center; min-height: 360px; background: #fff; overflow: hidden; }
+.hcmus-gallery__main img { display: block; width: 100%; height: auto; max-height: 560px; object-fit: contain; }
+.hcmus-gallery__thumbs { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+.hcmus-gallery__thumb { display: block; width: 92px; background: #fff; border: 1px solid transparent; }
+.hcmus-gallery__thumb:hover { border-color: var(--ha-gold); }
+.hcmus-gallery__thumb img { display: block; width: 100%; height: auto; }
+.hcmus-product__short { color: #2b3540; font-size: 17px; line-height: 1.8; font-weight: 300; }
+.hcmus-product__short p { margin: 0 0 14px; }
+.hcmus-product__stock { display: inline-block; margin: 18px 0 24px; padding: 8px 18px; border-radius: 99px; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; }
+.hcmus-product__stock.is-in { color: #2f6b3c; background: #e5f1e7; }
+.hcmus-product__stock.is-out { color: #9b2c2c; background: #f6e3e3; }
+.hcmus-product__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 36px; }
+.hcmus-product__quick { display: grid; grid-template-columns: auto 1fr; gap: 12px 28px; margin: 0 0 24px; padding: 24px 0; border-top: 1px solid #d9d1c2; border-bottom: 1px solid #d9d1c2; }
+.hcmus-product__quick dt { color: #9a8359; font-size: 10px; font-weight: 700; letter-spacing: 2px; padding-top: 3px; }
+.hcmus-product__quick dd { margin: 0; color: var(--ha-ink); }
+.hcmus-product__text { max-width: 820px; color: #2b3540; font-size: 17px; line-height: 1.9; }
+.hcmus-product__text h2, .hcmus-product__text h3 { color: var(--ha-navy); }
+.hcmus-spec-table { width: 100%; max-width: 860px; border-collapse: collapse; background: #fff; }
+.hcmus-spec-table th, .hcmus-spec-table td { padding: 18px 26px; text-align: left; border-bottom: 1px solid #eee9df; font-size: 15px; }
+.hcmus-spec-table th { width: 34%; color: #9a8359; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+.hcmus-reviews { max-width: 820px; background: #fff; padding: 34px; }
+.hcmus-reviews ol, .hcmus-reviews ul { list-style: none; margin: 0; padding: 0; }
+.hcmus-reviews input[type="text"], .hcmus-reviews input[type="email"], .hcmus-reviews textarea, .hcmus-reviews select { width: 100%; padding: 12px; border: 1px solid #d9d1c2; font-family: inherit; }
+.hcmus-reviews input[type="submit"] { padding: 14px 26px; border: 0; background: var(--ha-navy); color: #fff; font-weight: 700; letter-spacing: 1.5px; cursor: pointer; }
+.hcmus-cost-section--embedded { padding: 48px 0; }
+.hcmus-cost-section--embedded .hcmus-wrap { width: auto; padding: 0 40px; }
+
+@media (max-width: 900px) {
+    .hcmus-intro__grid, .hcmus-values__grid, .hcmus-showroom__inner, .hcmus-product__overview { grid-template-columns: 1fr; }
+    .hcmus-showroom__inner { gap: 36px; }
+    .hcmus-showroom__media { min-height: 280px; }
+    .hcmus-page-head { padding: 54px 0 40px; }
+    .hcmus-cost-section--embedded .hcmus-wrap { padding: 0 20px; }
+}
+
+/* ===== v2.1: số giỏ trong menu, thông báo WooCommerce, phân trang, ghi chú xe điện ===== */
+.hcmus-menu__count { display: inline-grid; place-items: center; min-width: 22px; height: 22px; margin-left: 10px; padding: 0 6px; border-radius: 11px; background: var(--ha-gold); color: #101b29; font-size: 11px; font-weight: 700; letter-spacing: 0; vertical-align: middle; }
+.hcmus-notices { padding-top: 24px; }
+.hcmus-notices .woocommerce-message, .hcmus-notices .woocommerce-info, .hcmus-notices .woocommerce-error { margin: 0 0 12px; padding: 14px 18px; list-style: none; background: #f6f1e6; border-left: 3px solid var(--ha-gold); color: #18202a; font-size: 14px; line-height: 1.6; }
+.hcmus-notices .woocommerce-error { border-left-color: #b3392f; }
+.hcmus-notices .woocommerce-message::before, .hcmus-notices .woocommerce-info::before, .hcmus-notices .woocommerce-error::before { display: none; }
+.hcmus-notices .button { float: right; margin-left: 16px; padding: 6px 16px; background: #101b29; color: #fff !important; font-size: 12px; letter-spacing: 1.5px; }
+.hcmus-pager { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 44px; }
+.hcmus-pager a { display: grid; place-items: center; min-width: 42px; height: 42px; padding: 0 10px; border: 1px solid rgba(201,169,110,.45); color: var(--ha-gold) !important; font-size: 14px; font-weight: 700; text-decoration: none !important; transition: background .2s, color .2s; }
+.hcmus-pager a:hover, .hcmus-pager a.is-active { background: var(--ha-gold); color: #101b29 !important; }
+.hcmus-cost__ev { margin: 12px 0 0; padding: 10px 14px; background: #f6f1e6; border-left: 3px solid var(--ha-gold); color: #4a4334; font-size: 13px; line-height: 1.6; }
+.hcmus-cost__ev[hidden] { display: none; }
+
+/* ===================================================================
+   v2.2 – Giỏ hàng, thanh toán, tài khoản
+   =================================================================== */
+.hcmus-woo { background: var(--ha-cream); }
+.hcmus-woo__body { padding: 52px 0 100px; }
+.hcmus-woo .hcmus-page-head { padding-bottom: 46px; }
+
+/* --- Thanh các bước --- */
+.hcmus-steps { display: flex; flex-wrap: wrap; align-items: center; margin: 34px 0 0; padding: 0; list-style: none; }
+.hcmus-steps li { display: flex; align-items: center; color: #7f8a96; font-size: 11px; font-weight: 700; letter-spacing: 2px; }
+.hcmus-steps li + li::before { content: ""; width: 56px; height: 1px; margin: 0 16px; background: rgba(255,255,255,.22); }
+.hcmus-step { display: inline-flex; align-items: center; gap: 12px; color: inherit !important; text-decoration: none !important; }
+.hcmus-steps b { display: inline-grid; place-items: center; width: 28px; height: 28px; border: 1px solid currentColor; border-radius: 50%; font-size: 12px; }
+.hcmus-steps li.is-done { color: var(--ha-gold); }
+.hcmus-steps li.is-current { color: #fff; }
+.hcmus-steps li.is-current b { background: var(--ha-gold); border-color: var(--ha-gold); color: #101b29; }
+
+/* --- Nút --- */
+body .hcmus-woo .woocommerce .button, body .hcmus-woo .woocommerce button.button, body .hcmus-woo .woocommerce input.button, body .hcmus-woo .woocommerce a.button { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 26px; border: 1px solid #101b29; border-radius: 0; background: #101b29; color: #fff !important; font: 700 11px/1 "Roboto", Arial, sans-serif; letter-spacing: 1.6px; text-transform: uppercase; text-decoration: none !important; cursor: pointer; transition: background .25s, color .25s, transform .25s; }
+body .hcmus-woo .woocommerce .button:hover { background: #22364d; border-color: #22364d; color: #fff !important; transform: translateY(-1px); }
+body .hcmus-woo .woocommerce .button.alt, body .hcmus-woo .woocommerce .button.checkout-button, body .hcmus-woo .woocommerce #place_order { background: #c9a96e; border-color: #c9a96e; color: #101b29 !important; }
+body .hcmus-woo .woocommerce .button.alt:hover, body .hcmus-woo .woocommerce .button.checkout-button:hover, body .hcmus-woo .woocommerce #place_order:hover { background: #e2c995; border-color: #e2c995; color: #101b29 !important; }
+body .hcmus-woo .woocommerce .button:disabled, body .hcmus-woo .woocommerce .button[disabled], body .hcmus-woo .woocommerce .button.disabled { opacity: .45; cursor: not-allowed; transform: none; }
+
+/* --- Ô nhập --- */
+body .hcmus-woo .woocommerce input.input-text, body .hcmus-woo .woocommerce input[type="text"], body .hcmus-woo .woocommerce input[type="email"], body .hcmus-woo .woocommerce input[type="tel"], body .hcmus-woo .woocommerce input[type="password"], body .hcmus-woo .woocommerce input[type="number"], body .hcmus-woo .woocommerce textarea, body .hcmus-woo .woocommerce select { width: 100%; min-height: 48px; padding: 0 14px; border: 1px solid #d9d2c3; border-radius: 0; background: #fff; color: #18202a; font: 400 15px/1.4 "Roboto", Arial, sans-serif; box-shadow: none; }
+body .hcmus-woo .woocommerce textarea { padding: 12px 14px; min-height: 110px; }
+body .hcmus-woo .woocommerce input:focus, body .hcmus-woo .woocommerce textarea:focus, body .hcmus-woo .woocommerce select:focus { border-color: #c9a96e; box-shadow: 0 0 0 3px rgba(201,169,110,.25); outline: 0; }
+body .hcmus-woo .woocommerce input[type="checkbox"], body .hcmus-woo .woocommerce input[type="radio"] { width: 17px; min-height: 0; height: 17px; accent-color: #c9a96e; vertical-align: middle; }
+body .hcmus-woo .woocommerce .select2-container .select2-selection--single { height: 48px; border: 1px solid #d9d2c3; border-radius: 0; background: #fff; }
+body .hcmus-woo .woocommerce .select2-container--default .select2-selection--single .select2-selection__rendered { padding: 0 14px; line-height: 46px; color: #18202a; }
+body .hcmus-woo .woocommerce .select2-container--default .select2-selection--single .select2-selection__arrow { height: 46px; right: 8px; }
+body.hcmus-standalone .select2-dropdown { border-color: #d9d2c3; border-radius: 0; }
+body.hcmus-standalone .select2-container--default .select2-results__option--highlighted[aria-selected], body.hcmus-standalone .select2-container--default .select2-results__option--highlighted[data-selected] { background: #101b29; color: #fff; }
+body .hcmus-woo .woocommerce label { display: block; margin: 0 0 8px; color: #5b6570; font-size: 11px; font-weight: 700; letter-spacing: 1.2px; line-height: 1.4; text-transform: uppercase; }
+body .hcmus-woo .woocommerce #payment label, body .hcmus-woo .woocommerce #shipping_method label, body .hcmus-woo .woocommerce label.checkbox, body .hcmus-woo .woocommerce label.radio, body .hcmus-woo .woocommerce .woocommerce-form__label-for-checkbox, body .hcmus-woo .woocommerce .woocommerce-form-login__rememberme { display: inline; margin: 0; color: #18202a; font-size: 14px; font-weight: 400; letter-spacing: .2px; text-transform: none; }
+body .hcmus-woo .woocommerce .required { color: #b3392f; text-decoration: none; }
+body .hcmus-woo .woocommerce .form-row { margin: 0 0 18px; padding: 0; }
+body .hcmus-woo .woocommerce h2, body .hcmus-woo .woocommerce h3 { margin: 0 0 22px; color: #101b29; font-size: 13px; font-weight: 700; letter-spacing: 3px; line-height: 1.4; text-transform: uppercase; }
+body .hcmus-woo .woocommerce a { color: #7d6535; }
+body .hcmus-woo .woocommerce a:hover { color: #101b29; }
+
+/* --- Thông báo --- */
+body .hcmus-woo .woocommerce .woocommerce-message, body .hcmus-woo .woocommerce .woocommerce-info, body .hcmus-woo .woocommerce .woocommerce-error { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin: 0 0 24px; padding: 16px 22px; list-style: none; border: 0; border-left: 3px solid #c9a96e; background: #fff; color: #18202a; font-size: 14px; line-height: 1.6; }
+body .hcmus-woo .woocommerce .woocommerce-error { border-left-color: #b3392f; }
+body .hcmus-woo .woocommerce .woocommerce-message::before, body .hcmus-woo .woocommerce .woocommerce-info::before, body .hcmus-woo .woocommerce .woocommerce-error::before { display: none; }
+body .hcmus-woo .woocommerce .woocommerce-message .button, body .hcmus-woo .woocommerce .woocommerce-info .button { float: none; margin: 0; }
+
+/* --- Bảng chung --- */
+body .hcmus-woo .woocommerce table.shop_table { width: 100%; margin: 0 0 24px; border: 1px solid #e6dfd1 !important; border-radius: 0 !important; border-collapse: collapse; background: #fff; }
+body .hcmus-woo .woocommerce table.shop_table th { padding: 16px 18px; border: 0; border-bottom: 1px solid #e6dfd1; background: #faf8f3; color: #6e7780; font-size: 11px; font-weight: 700; letter-spacing: 1.6px; text-align: left; text-transform: uppercase; }
+body .hcmus-woo .woocommerce table.shop_table td { padding: 20px 18px; border: 0; border-top: 1px solid #eee9df; color: #18202a; font-size: 14px; vertical-align: middle; }
+body .hcmus-woo .woocommerce table.shop_table thead + tbody tr:first-child td { border-top: 0; }
+body .hcmus-woo .woocommerce table.shop_table .amount { color: #101b29; font-weight: 700; }
+
+/* --- Giỏ hàng --- */
+body.woocommerce-cart .hcmus-woo .woocommerce { display: grid; grid-template-columns: minmax(0, 1fr) 390px; column-gap: 36px; align-items: start; }
+body.woocommerce-cart .hcmus-woo .woocommerce .woocommerce-notices-wrapper { grid-column: 1 / -1; }
+body.woocommerce-cart .hcmus-woo .woocommerce .woocommerce-cart-form { grid-column: 1; }
+body.woocommerce-cart .hcmus-woo .woocommerce .cart-collaterals { grid-column: 2; width: 100%; float: none; }
+body.woocommerce-cart .hcmus-woo .woocommerce .cart-empty, body .hcmus-woo .woocommerce .return-to-shop { grid-column: 1 / -1; }
+body .hcmus-woo .woocommerce table.cart img { display: block; width: 104px; height: auto; border-radius: 0; }
+body .hcmus-woo .woocommerce table.cart .product-thumbnail { width: 124px; }
+body .hcmus-woo .woocommerce table.cart td.product-name a { color: #101b29; font-size: 15px; font-weight: 700; text-decoration: none; }
+body .hcmus-woo .woocommerce table.cart td.product-name a:hover { color: #7d6535; }
+body .hcmus-woo .woocommerce table.cart td.product-price, body .hcmus-woo .woocommerce table.cart td.product-subtotal { color: #101b29; font-weight: 700; white-space: nowrap; }
+body .hcmus-woo .woocommerce a.remove { display: inline-grid; place-items: center; width: 30px; height: 30px; border: 1px solid #d9d2c3; border-radius: 50%; background: transparent; color: #7d6535 !important; font-size: 18px; line-height: 1; text-decoration: none; }
+body .hcmus-woo .woocommerce a.remove:hover { border-color: #101b29; background: #101b29; color: #fff !important; }
+body .hcmus-woo .woocommerce .quantity .qty { width: 76px; min-height: 44px; padding: 0 8px; text-align: center; }
+body .hcmus-woo .woocommerce td.actions { padding: 20px 18px; background: #faf8f3; }
+body .hcmus-woo .woocommerce td.actions::after { content: ""; display: table; clear: both; }
+body .hcmus-woo .woocommerce td.actions .coupon { display: flex; gap: 10px; float: left; }
+body .hcmus-woo .woocommerce td.actions .coupon .input-text { float: none; width: 210px; margin: 0; }
+body .hcmus-woo .woocommerce button[name="update_cart"] { float: right; border-color: #101b29; background: transparent; color: #101b29 !important; }
+body .hcmus-woo .woocommerce button[name="update_cart"]:hover { background: #101b29; color: #fff !important; }
+.hcmus-continue { display: inline-block; margin: 2px 0 0; color: #7d6535 !important; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-decoration: none !important; }
+.hcmus-continue:hover { color: #101b29 !important; }
+body .hcmus-woo .woocommerce .cart_totals { float: none !important; width: 100% !important; padding: 30px; border: 1px solid #e6dfd1; background: #fff; }
+body .hcmus-woo .woocommerce .cart_totals h2 { padding-bottom: 14px; border-bottom: 2px solid #c9a96e; }
+body .hcmus-woo .woocommerce .cart_totals table.shop_table { margin: 0 0 20px; border: 0 !important; }
+body .hcmus-woo .woocommerce .cart_totals table.shop_table th, body .hcmus-woo .woocommerce .cart_totals table.shop_table td { padding: 14px 0; border: 0; border-bottom: 1px solid #eee9df; background: transparent; color: #18202a; font-size: 14px; font-weight: 400; letter-spacing: .2px; text-transform: none; }
+body .hcmus-woo .woocommerce .cart_totals .order-total th, body .hcmus-woo .woocommerce .cart_totals .order-total td { border-bottom: 0; padding-top: 20px; font-size: 16px; font-weight: 700; }
+body .hcmus-woo .woocommerce .cart_totals .order-total .amount { color: #7d6535; font-size: 22px; }
+body .hcmus-woo .woocommerce .wc-proceed-to-checkout { margin: 0; padding: 0; }
+body .hcmus-woo .woocommerce .wc-proceed-to-checkout .checkout-button { display: flex; width: 100%; min-height: 54px; margin: 0; padding: 0 26px; font-size: 12px; }
+body .hcmus-woo .woocommerce .cross-sells { float: none; width: 100%; }
+body .hcmus-woo .woocommerce .cart-empty { display: block; margin: 0; padding: 74px 24px 16px; border: 1px solid #e6dfd1; border-bottom: 0; background: #fff; color: #18202a; font-size: 18px; text-align: center; }
+body .hcmus-woo .woocommerce .return-to-shop { margin: 0; padding: 0 24px 74px; border: 1px solid #e6dfd1; border-top: 0; background: #fff; text-align: center; }
+
+/* --- Form khung chung (đăng nhập, mã giảm giá...) --- */
+body .hcmus-woo .woocommerce form.login, body .hcmus-woo .woocommerce form.register, body .hcmus-woo .woocommerce form.checkout_coupon, body .hcmus-woo .woocommerce form.lost_reset_password { margin: 0 0 24px; padding: 28px; border: 1px solid #e6dfd1; border-radius: 0; background: #fff; }
+body .hcmus-woo .woocommerce form.checkout_coupon .form-row-first, body .hcmus-woo .woocommerce form.checkout_coupon .form-row-last { float: none; width: auto; }
+body .hcmus-woo .woocommerce .lost_password, body .hcmus-woo .woocommerce .woocommerce-LostPassword { margin: 16px 0 0; font-size: 13px; }
+
+/* --- Thanh toán --- */
+body.woocommerce-checkout .hcmus-woo .woocommerce form.checkout { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, .85fr); column-gap: 36px; align-items: start; }
+body.woocommerce-checkout .hcmus-woo .woocommerce #customer_details { grid-column: 1; grid-row: 1 / span 2; }
+body.woocommerce-checkout .hcmus-woo .woocommerce #order_review_heading { grid-column: 2; grid-row: 1; margin: 0 0 16px; }
+body.woocommerce-checkout .hcmus-woo .woocommerce #order_review { grid-column: 2; grid-row: 2; position: sticky; top: 100px; padding: 30px; border: 1px solid #e6dfd1; background: #fff; }
+body .hcmus-woo .woocommerce .col2-set .col-1, body .hcmus-woo .woocommerce .col2-set .col-2 { float: none; width: 100%; }
+body.woocommerce-checkout .hcmus-woo .woocommerce #customer_details .woocommerce-billing-fields, body .hcmus-woo .woocommerce #customer_details .woocommerce-shipping-fields, body .hcmus-woo .woocommerce #customer_details .woocommerce-additional-fields { margin: 0 0 24px; padding: 30px; border: 1px solid #e6dfd1; background: #fff; }
+body.woocommerce-checkout .hcmus-woo .woocommerce #customer_details h3 { padding-bottom: 14px; border-bottom: 2px solid #c9a96e; }
+body.woocommerce-checkout .hcmus-woo .woocommerce #ship-to-different-address { padding-bottom: 0; border: 0; }
+body.woocommerce-checkout .hcmus-woo .woocommerce #ship-to-different-address label { font-size: 13px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; }
+body .hcmus-woo .woocommerce .woocommerce-billing-fields__field-wrapper, body .hcmus-woo .woocommerce .woocommerce-shipping-fields__field-wrapper, body .hcmus-woo .woocommerce .woocommerce-additional-fields__field-wrapper { display: grid; grid-template-columns: 1fr 1fr; column-gap: 18px; }
+body .hcmus-woo .woocommerce .woocommerce-billing-fields__field-wrapper .form-row, body .hcmus-woo .woocommerce .woocommerce-shipping-fields__field-wrapper .form-row, body .hcmus-woo .woocommerce .woocommerce-additional-fields__field-wrapper .form-row { float: none !important; width: 100% !important; }
+body .hcmus-woo .woocommerce .form-row-wide, body .hcmus-woo .woocommerce .form-row.notes, body .hcmus-woo .woocommerce .form-row.create-account, body .hcmus-woo .woocommerce #order_comments_field { grid-column: 1 / -1; }
+body.woocommerce-checkout .hcmus-woo .woocommerce table.woocommerce-checkout-review-order-table { margin: 0 0 22px; border: 0 !important; }
+body.woocommerce-checkout .hcmus-woo .woocommerce table.woocommerce-checkout-review-order-table th, body .hcmus-woo .woocommerce table.woocommerce-checkout-review-order-table td { padding: 14px 0; border: 0; border-bottom: 1px solid #eee9df; background: transparent; }
+body.woocommerce-checkout .hcmus-woo .woocommerce table.woocommerce-checkout-review-order-table thead th { font-size: 10px; }
+body.woocommerce-checkout .hcmus-woo .woocommerce table.woocommerce-checkout-review-order-table .product-name { font-weight: 700; color: #101b29; }
+body.woocommerce-checkout .hcmus-woo .woocommerce table.woocommerce-checkout-review-order-table .product-quantity { color: #7d6535; font-weight: 700; }
+body.woocommerce-checkout .hcmus-woo .woocommerce table.woocommerce-checkout-review-order-table tfoot th { font-size: 12px; }
+body.woocommerce-checkout .hcmus-woo .woocommerce table.woocommerce-checkout-review-order-table .order-total th, body .hcmus-woo .woocommerce table.woocommerce-checkout-review-order-table .order-total td { border-bottom: 0; padding-top: 20px; }
+body.woocommerce-checkout .hcmus-woo .woocommerce table.woocommerce-checkout-review-order-table .order-total .amount { color: #7d6535; font-size: 22px; }
+body .hcmus-woo .woocommerce #shipping_method { margin: 0; padding: 0; list-style: none; }
+body .hcmus-woo .woocommerce #payment { border-radius: 0; background: transparent; }
+body .hcmus-woo .woocommerce #payment ul.payment_methods { margin: 0; padding: 0 0 6px; border-bottom: 1px solid #eee9df; list-style: none; }
+body .hcmus-woo .woocommerce #payment ul.payment_methods li { margin: 0 0 10px; padding: 14px 16px; border: 1px solid #e6dfd1; }
+body .hcmus-woo .woocommerce #payment ul.payment_methods li img { max-height: 24px; vertical-align: middle; }
+body .hcmus-woo .woocommerce #payment div.payment_box { margin: 12px 0 0; padding: 14px 16px; border-radius: 0; background: #f6f1e6 !important; color: #18202a !important; font-size: 13px; }
+body .hcmus-woo .woocommerce #payment div.payment_box::before { border-bottom-color: #f6f1e6 !important; }
+body .hcmus-woo .woocommerce #payment div.form-row { margin: 0; padding: 20px 0 0; }
+body .hcmus-woo .woocommerce #place_order { float: none; width: 100%; min-height: 56px; margin: 8px 0 0; font-size: 12px; }
+body .hcmus-woo .woocommerce .woocommerce-privacy-policy-text, body .hcmus-woo .woocommerce .woocommerce-terms-and-conditions-wrapper { color: #6e7780; font-size: 12px; line-height: 1.7; }
+
+/* --- Đặt hàng thành công --- */
+body .hcmus-woo .woocommerce .woocommerce-thankyou-order-received { margin: 0 0 24px; padding: 26px 30px; border-left: 3px solid #c9a96e; background: #fff; color: #18202a; font-size: 18px; }
+body .hcmus-woo .woocommerce ul.order_details { display: flex; flex-wrap: wrap; margin: 0 0 30px; padding: 0; border: 1px solid #e6dfd1; background: #fff; list-style: none; }
+body .hcmus-woo .woocommerce ul.order_details li { float: none; flex: 1 1 160px; margin: 0; padding: 20px 24px; border: 0; border-right: 1px solid #eee9df; color: #6e7780; font-size: 11px; font-weight: 700; letter-spacing: 1.4px; line-height: 1.6; text-transform: uppercase; }
+body .hcmus-woo .woocommerce ul.order_details li strong { display: block; margin-top: 6px; color: #101b29; font-size: 15px; letter-spacing: 0; text-transform: none; }
+body .hcmus-woo .woocommerce .woocommerce-columns--addresses { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+body .hcmus-woo .woocommerce address { padding: 22px; border: 1px solid #e6dfd1; background: #fff; font-style: normal; line-height: 1.8; }
+
+/* --- Tài khoản --- */
+body.woocommerce-account.logged-in .hcmus-woo .woocommerce { display: grid; grid-template-columns: 270px minmax(0, 1fr); column-gap: 36px; align-items: start; }
+body.woocommerce-account.logged-in .hcmus-woo .woocommerce .woocommerce-notices-wrapper { grid-column: 1 / -1; }
+body.woocommerce-account .hcmus-woo .woocommerce .woocommerce-MyAccount-navigation { float: none; width: 100%; border: 1px solid #e6dfd1; background: #fff; }
+body.woocommerce-account .hcmus-woo .woocommerce .woocommerce-MyAccount-navigation ul { margin: 0; padding: 0; list-style: none; }
+body.woocommerce-account .hcmus-woo .woocommerce .woocommerce-MyAccount-navigation li { margin: 0; border-bottom: 1px solid #eee9df; }
+body.woocommerce-account .hcmus-woo .woocommerce .woocommerce-MyAccount-navigation li:last-child { border-bottom: 0; }
+body.woocommerce-account .hcmus-woo .woocommerce .woocommerce-MyAccount-navigation li a { display: block; padding: 17px 22px; border-left: 3px solid transparent; color: #18202a; font-size: 12px; font-weight: 700; letter-spacing: 1.6px; text-decoration: none; text-transform: uppercase; transition: background .2s, border-color .2s; }
+body.woocommerce-account .hcmus-woo .woocommerce .woocommerce-MyAccount-navigation li a:hover { background: #faf8f3; color: #101b29; }
+body.woocommerce-account .hcmus-woo .woocommerce .woocommerce-MyAccount-navigation li.is-active a { border-left-color: #c9a96e; background: #f6f1e6; color: #101b29; }
+body.woocommerce-account .hcmus-woo .woocommerce .woocommerce-MyAccount-content { float: none; width: 100%; padding: 34px; border: 1px solid #e6dfd1; background: #fff; color: #18202a; line-height: 1.8; }
+body.woocommerce-account .hcmus-woo .woocommerce .woocommerce-MyAccount-content table.shop_table { border: 0 !important; }
+body.woocommerce-account .hcmus-woo .woocommerce .woocommerce-MyAccount-content > p:first-child { margin-top: 0; }
+body .hcmus-woo .woocommerce .woocommerce-orders-table .button { min-height: 36px; margin: 0 6px 6px 0; padding: 0 16px; }
+body .hcmus-woo .woocommerce .woocommerce-Addresses, body .hcmus-woo .woocommerce .u-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+body .hcmus-woo .woocommerce .u-columns > div, body .hcmus-woo .woocommerce .woocommerce-Addresses > div { float: none; width: 100%; max-width: none; }
+body .hcmus-woo .woocommerce .woocommerce-Address-title { display: flex; justify-content: space-between; align-items: baseline; }
+body .hcmus-woo .woocommerce .woocommerce-Address-title a.edit { float: none; font-size: 11px; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; }
+body .hcmus-woo .woocommerce .woocommerce-EditAccountForm { display: grid; grid-template-columns: 1fr 1fr; column-gap: 18px; }
+body .hcmus-woo .woocommerce .woocommerce-EditAccountForm .clear { display: none; }
+body .hcmus-woo .woocommerce .woocommerce-EditAccountForm .form-row { float: none; width: 100%; }
+body .hcmus-woo .woocommerce .woocommerce-EditAccountForm .form-row-wide, body .hcmus-woo .woocommerce .woocommerce-EditAccountForm fieldset, body .hcmus-woo .woocommerce .woocommerce-EditAccountForm > p:not(.form-row) { grid-column: 1 / -1; }
+body .hcmus-woo .woocommerce .woocommerce-EditAccountForm fieldset { margin: 6px 0 18px; padding: 22px; border: 1px solid #e6dfd1; }
+body .hcmus-woo .woocommerce .woocommerce-EditAccountForm legend { padding: 0 10px; color: #101b29; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+body .hcmus-woo .woocommerce #customer_login .u-column1, body .hcmus-woo .woocommerce #customer_login .u-column2 { padding: 36px; border: 1px solid #e6dfd1; background: #fff; }
+body .hcmus-woo .woocommerce #customer_login form { margin: 0; padding: 0; border: 0; }
+body .hcmus-woo .woocommerce > form.woocommerce-form-login, body .hcmus-woo .woocommerce > form.lost_reset_password { max-width: 520px; margin: 0 auto 24px; padding: 36px; }
+
+/* --- Giỏ hàng / thanh toán dạng khối (WooCommerce Blocks) --- */
+.hcmus-woo .wc-block-components-button:not(.is-link) { border-radius: 0; background: #101b29; color: #fff; font-size: 12px; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; }
+.hcmus-woo .wc-block-cart__submit-button, .hcmus-woo .wc-block-components-checkout-place-order-button { background: #c9a96e; color: #101b29; }
+.hcmus-woo .wc-block-components-text-input input, .hcmus-woo .wc-block-components-select .wc-blocks-components-select__select, .hcmus-woo .wc-block-components-textarea { border-radius: 0; border-color: #d9d2c3; }
+.hcmus-woo .wc-block-components-sidebar, .hcmus-woo .wc-block-cart__main { font-family: "Roboto", Arial, sans-serif; }
+.hcmus-woo .wc-block-components-totals-wrapper, .hcmus-woo .wc-block-components-order-summary { border-color: #e6dfd1; }
+.hcmus-woo .wc-block-cart-items th, .hcmus-woo .wc-block-components-sidebar .wc-block-components-totals-item__label { font-size: 11px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; }
+.hcmus-woo .wp-block-woocommerce-cart, .hcmus-woo .wp-block-woocommerce-checkout { color: #18202a; }
+
+/* --- Responsive --- */
+@media (max-width: 960px) {
+    body.woocommerce-cart .hcmus-woo .woocommerce, body .hcmus-woo .woocommerce .u-columns, body .hcmus-woo .woocommerce .woocommerce-Addresses, body .hcmus-woo .woocommerce .woocommerce-columns--addresses { grid-template-columns: 1fr; }
+    body.woocommerce-cart .hcmus-woo .woocommerce .woocommerce-cart-form, body.woocommerce-cart .hcmus-woo .woocommerce .cart-collaterals { grid-column: 1; }
+    body.woocommerce-cart .hcmus-woo .woocommerce .cart-collaterals { margin-top: 12px; }
+    body.woocommerce-checkout .hcmus-woo .woocommerce form.checkout { grid-template-columns: 1fr; }
+    body.woocommerce-checkout .hcmus-woo .woocommerce #customer_details, body.woocommerce-checkout .hcmus-woo .woocommerce #order_review_heading, body.woocommerce-checkout .hcmus-woo .woocommerce #order_review { grid-column: 1; grid-row: auto; }
+    body.woocommerce-checkout .hcmus-woo .woocommerce #order_review { position: static; }
+    body.woocommerce-account.logged-in .hcmus-woo .woocommerce { grid-template-columns: 1fr; }
+    body.woocommerce-account.logged-in .hcmus-woo .woocommerce .woocommerce-MyAccount-navigation { margin-bottom: 24px; }
+    .hcmus-woo__body { padding: 36px 0 64px; }
+}
+@media (max-width: 768px) {
+    body .hcmus-woo .woocommerce td.actions .coupon, body .hcmus-woo .woocommerce button[name="update_cart"] { float: none; width: 100%; }
+    body .hcmus-woo .woocommerce td.actions .coupon { margin-bottom: 12px; }
+    body .hcmus-woo .woocommerce td.actions .coupon .input-text { width: 100%; flex: 1; }
+    body .hcmus-woo .woocommerce table.cart .product-thumbnail { display: none; }
+}
+@media (max-width: 600px) {
+    .hcmus-steps li + li::before { width: 24px; margin: 0 10px; }
+    .hcmus-steps li:not(.is-current) .hcmus-step span { display: none; }
+    body .hcmus-woo .woocommerce .woocommerce-billing-fields__field-wrapper, body .hcmus-woo .woocommerce .woocommerce-shipping-fields__field-wrapper, body .hcmus-woo .woocommerce .woocommerce-additional-fields__field-wrapper, body .hcmus-woo .woocommerce .woocommerce-EditAccountForm { grid-template-columns: 1fr; }
+    body.woocommerce-checkout .hcmus-woo .woocommerce #customer_details .woocommerce-billing-fields, body.woocommerce-checkout .hcmus-woo .woocommerce #customer_details .woocommerce-shipping-fields, body.woocommerce-checkout .hcmus-woo .woocommerce #customer_details .woocommerce-additional-fields, body.woocommerce-checkout .hcmus-woo .woocommerce #order_review, body .hcmus-woo .woocommerce .cart_totals, body.woocommerce-account .hcmus-woo .woocommerce .woocommerce-MyAccount-content, body .hcmus-woo .woocommerce #customer_login .u-column1, body .hcmus-woo .woocommerce #customer_login .u-column2 { padding: 22px; }
+    body .hcmus-woo .woocommerce > form.woocommerce-form-login, body .hcmus-woo .woocommerce > form.lost_reset_password { padding: 24px; }
+}
+@media (prefers-reduced-motion: reduce) { body .hcmus-woo .woocommerce .button, body.woocommerce-account .hcmus-woo .woocommerce .woocommerce-MyAccount-navigation li a { transition: none; } }
+
+.hcmus-woo.hcmus-home { overflow: visible; }
